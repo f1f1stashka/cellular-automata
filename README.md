@@ -19,7 +19,7 @@ survive 5 6 7 8 9 10
 
 ### controls
 
-arrows to move camera
-Space - pause/resume
-F - next frame
-R - restart
+arrows to move camera<br>
+Space - pause/resume<br>
+F - next frame<br>
+R - restart<br>
