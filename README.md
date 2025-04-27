@@ -14,3 +14,12 @@ rules:
 
 birth 8 9 10
 survive 5 6 7 8 9 10
+
+## cellauto.py
+
+### controls
+
+arrows to move camera
+Space - pause/resume
+F - next frame
+R - restart
