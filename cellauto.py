@@ -84,7 +84,7 @@ while not done:
             if event.key == pygame.K_r:
                 print("ok. restarting map.")
                 main_map = randMap(map_w, map_h)
-                stability = False
+                stable = False
             if event.key == pygame.K_SPACE:
                 running = not running
                 print('running:', running)
@@ -129,5 +129,5 @@ while not done:
     if stability:
         print("it stability now")
         main_map = randMap(map_w, map_h)
-        stability = False
+        stable = False
                 
