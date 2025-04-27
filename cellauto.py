@@ -1,22 +1,24 @@
 import random
 import pygame
 
-map_w = 64
-map_h = 64
+# yes i know, code is not good, it is lagging on my laptop
 
-cell_w = 6
-cell_h = 6
+map_w = 64 # map width
+map_h = 64 # map height
 
-window_w = map_w * cell_w
-window_h = map_h * cell_h
+cell_w = 6 # cell width (for render)
+cell_h = 6 # cell height (for render)
 
-rule_b = [8,9,10]
-rule_s = [5,6,7,8,9,10]
+window_w = map_w * cell_w # window width (for render)
+window_h = map_h * cell_h # window height (for render)
 
-alive_color = (255, 255, 255)
-alive_hl_color_1 = (16, 128, 16)
+rule_b = [8,9,10] # neighbour counts for cell to birth
+rule_s = [5,6,7,8,9,10] # neighbour counts for cell to keep alive
+
+alive_color = (255, 255, 255) # color for alive cell
+alive_hl_color_1 = (16, 128, 16) # color for neighbour area highlight
 alive_hl_color_2 = (64, 128, 64)
-bg_color_1 = (0, 0, 0)
+bg_color_1 = (0, 0, 0) # color for dead cell (background)
 bg_color_2 = (32, 32, 32)
 
 def emptyMap(w, h):
@@ -42,7 +44,7 @@ def randMap(w, h):
 back_map = emptyMap(map_w, map_h)
 main_map = randMap(map_w, map_h)
 
-stability = False
+stable = False
 
 def tick():
     global map_w, map_h, main_map, stability
@@ -65,7 +67,7 @@ def tick():
     main_map = sec_map
 
     if back_map == main_map:
-        stability = True
+        stable = True
 
 pygame.init()
 screen = pygame.display.set_mode((window_w, window_h))
